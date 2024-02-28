@@ -5,7 +5,7 @@ This Python calculator script provides a command-line interface for performing v
 Clone this repository to your local machine:
 
 ```
-git clone https://github.com/your_username/python-calculator.git
+git clone https://github.com/somecodername/pythoncalc.git
 cd pythoncalc
 python3.11 main.py
 ```
