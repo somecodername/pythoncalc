@@ -19,7 +19,7 @@ class TokenType:
     SIN = 'SIN'
     COS = 'COS'
     TAN = 'TAN'
-    POW = '^'  # Added exponent operator
+    POW = '^' 
 
 constants = {
     'pi': math.pi,
@@ -92,7 +92,7 @@ class Lexer:
 
         if current_char.isdigit():
             return self.integer()
-        elif current_char in '+-*/':  # Combined arithmetic operators
+        elif current_char in '+-*/':
             return self.handle_operator(current_char)
         elif current_char == '(':
             token = Token(TokenType.LPAREN, current_char)
@@ -307,7 +307,7 @@ def plot_trigonometric_graph(func):
     plt.show()
 
 def plot_triangle(vertices):
-    vertices.append(vertices[0])  # Repeat the first vertex to close the triangle
+    vertices.append(vertices[0])
     xs, ys = zip(*vertices)
     plt.plot(xs, ys, 'bo-', label='Triangle')
     plt.fill(xs, ys, 'b', alpha=0.1)
@@ -322,7 +322,7 @@ def plot_triangle(vertices):
     plt.show()
 
 def plot_polygon(vertices):
-    vertices.append(vertices[0])  # Repeat the first vertex to close the polygon
+    vertices.append(vertices[0])
     xs, ys = zip(*vertices)
     plt.plot(xs, ys, 'bo-', label='Polygon')
     plt.fill(xs, ys, 'b', alpha=0.1)
